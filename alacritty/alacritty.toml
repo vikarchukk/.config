@@ -1,0 +1,40 @@
+[window]
+  dynamic_padding = true
+[window.padding]
+  x = 5
+  y = 0
+[font]
+  size = 9.
+[font.normal]
+  family = "monocraft"
+  style = "Regular"
+[font.offset]
+  x = 0
+  y = 2
+[colors.primary]
+  background = "#000000"
+[colors.normal]
+  black = "#555555"
+  red = "#CC6666"
+  green = "#B5BD68"
+  yellow = "#F0C674"
+  blue = "#81A2BE"
+  magenta = "#B294BB"
+  cyan = "#8ABEB7"
+  white = "#D8D8D8"
+[[keyboard.bindings]]
+  key = "c"
+  mods = "Control"
+  action = "Copy"
+[[keyboard.bindings]]
+  key = "v"
+  mods = "Control"
+  action = "Paste"
+[[keyboard.bindings]]
+  key = "C"
+  mods = "Control|Shift"
+  chars = "\u0003"
+[[keyboard.bindings]]
+  key = "V"
+  mods = "Control|Shift"
+  chars = "\u0016"
