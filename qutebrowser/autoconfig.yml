@@ -1,0 +1,124 @@
+config_version: 2
+  settings:
+    auto_save.session:
+      global: true
+    bindings.commands:
+      global:
+        normal:
+          <Ctrl+v>: null
+          H: forward
+          J: tab-prev
+          K: tab-next
+          L: back
+          Zb: open -t https://vault.bitwarden.com/#/login
+          Zc: open -t https://chatgpt.com/
+          Zd: open -t https://translate.google.com/u/1/?sl=auto&tl=uk&op=translate
+          Zf: open -t https://finance.pikapod.net
+          Zg: open -t https://github.com/vikarchukk
+          Zl: open -t https://claude.ai/new
+          Zm: open -t https://gemini.google.com/app
+          Zn: open -t https://www.notion.so
+          Zs: open -t https://chat.deepseek.com/
+          Zt: open -t https://web.telegram.org/a/
+          Zw: open -t https://www.codewars.com
+          Zy: open -t https://www.youtube.com/
+          sg: greasemonkey-reload
+          ss: config-cycle statusbar.show always in-mode
+          st: config-cycle tabs.show always switching
+          v: null
+          vv: open https://translate.google.com/translate?sl=auto&tl=uk&u={url}
+          zb: open https://vault.bitwarden.com/#/login
+          zc: open https://chatgpt.com/
+          zd: open https://translate.google.com/u/1/?sl=auto&tl=uk&op=translate
+          zf: open https://finance.pikapod.net
+          zg: open https://github.com/vikarchukk
+          zl: open https://claude.ai/new
+          zm: open https://gemini.google.com/app
+          zn: open https://www.notion.so
+          zs: open https://chat.deepseek.com/
+          zt: open https://web.telegram.org/a/
+          zw: open https://www.codewars.com
+          zy: open https://www.youtube.com/
+    colors.hints.bg:
+      global: white
+    content.geolocation:
+      https://whatismyaddress.net: true
+      https://www.blocket.se: true
+    content.javascript.clipboard:
+      https://chatgpt.com: access-paste
+      https://contacts.google.com: access-paste
+      https://developer.mozilla.org: access-paste
+      https://github.com: access-paste
+      https://translate.google.com: access-paste
+      https://web.telegram.org: access-paste
+      https://www.deepl.com: access-paste
+      https://www.emailnator.com: access-paste
+      https://www.google.com: access-paste
+      https://www.notion.so: access-paste
+    content.media.audio_capture:
+      https://chatgpt.com: true
+      https://grok.com: true
+    content.media.video_capture:
+      https://www.facebook.com: true
+    content.notifications.enabled:
+      https://calendar.google.com: true
+      https://web.telegram.org: true
+    content.register_protocol_handler:
+      https://calendar.google.com?cid=%25s: true
+      https://mail.google.com?extsrc=mailto&url=%25s: true
+    downloads.position:
+      global: bottom
+    fonts.default_family:
+      global: monocraft
+    fonts.default_size:
+      global: 13pt
+    hints.border:
+      global: '0px solid #000000'
+    hints.padding:
+      global:
+        bottom: 0
+        left: 0
+        right: 0
+        top: 0
+    hints.radius:
+      global: 2
+    scrolling.bar:
+      global: never
+    statusbar.show:
+      global: always
+    statusbar.widgets:
+      global:
+      - keypress
+      - search_match
+      - url
+      - scroll
+      - progress
+    tabs.favicons.show:
+      global: never
+    tabs.indicator.width:
+      global: 0
+    tabs.new_position.unrelated:
+      global: next
+    tabs.padding:
+      global:
+        bottom: 1
+        left: 3
+        right: 0
+        top: 1
+    tabs.show:
+      global: always
+    tabs.show_switching_delay:
+      global: 3000
+    tabs.title.format:
+      global: '{current_title}'
+    url.default_page:
+      global: https://link.pikapod.net/bookmarks
+    url.searchengines:
+      global:
+        DEFAULT: https://www.google.com/search?q={}
+        d: https://translate.google.com/u/1/?sl=auto&tl=uk&text={}&op=translate
+        y: https://www.youtube.com/results?search_query={}
+    url.start_pages:
+      global: https://link.pikapod.net/bookmarks
+    zoom.default:
+      global: 125%
