@@ -1,36 +1,26 @@
 static const unsigned int borderpx  = 2; // товщина обведення вікна
 static const unsigned int snap = 5; // відстань приклеювання вікна до країв
-
 static const int showbar = 1; // меню - 0 сховати | 1 показати
 static const int topbar = 0; // меню - 0 знизу | 1 зверху
-
 static const float mfact = 0.55; // розмір основної області в процентах
 static const int nmaster = 1; // кількість вікон в головній зоні
-static const int resizehints = 0; // підказки щодо розміру 1 включити
-static const int lockfullscreen = 1; // використовує весь екран 1 включити
-
-
-static const int refreshrate = 120;  // refresh rate (per second) for client move/resize
-static char dmenumon[2] = "0"; // монітор для dmenu
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL }; // команда dmenu
-
+static const int resizehints = 0; // розмір вікна від програми
+static const int lockfullscreen = 0; // переведе фокус на повноекранне вікно
+static const int refreshrate = 120; // частота оновлення при зміні розміру вікна
 
 static const char *fonts[] = { "monocraft:size=12" }; // шрифт і розмір
 static const char *colors[][3] = {
+// стан             текст      фон        рамки
   [SchemeNorm] = { "#ffffff", "#000000", "#000000" },
   [SchemeSel]  = { "#000000", "#ffffff", "#ffffff" } }; // схема кольорів
 
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; // теги
-
-// рижими відображиння вікон
-static const Layout layouts[] = {
+/* скрипт для того щоб можна було переходити між тегами */ void shiftview(const Arg *arg) { Arg shifted; shifted.ui = selmon->tagset[selmon->seltags]; if (arg->i > 0) shifted.ui = (shifted.ui << arg->i) | (shifted.ui >> (LENGTH(tags) - arg->i)); else shifted.ui = (shifted.ui >> (- arg->i) | shifted.ui << (LENGTH(tags) + arg->i)); view(&shifted); }
+static const Layout layouts[] = { // рижими відображиння вікон
   { "[M]", monocle }, // вікна наложуються один на одного
   { "[]=", tile }, // головна зона + другорядна зона
   { "><>", NULL }, // вікна можна переміщати вільно
 };
-
-// скрипт для того щоб можна було переходити між тегами
-void shiftview(const Arg *arg) { Arg shifted; shifted.ui = selmon->tagset[selmon->seltags]; if (arg->i > 0) shifted.ui = (shifted.ui << arg->i) | (shifted.ui >> (LENGTH(tags) - arg->i)); else shifted.ui = (shifted.ui >> (- arg->i) | shifted.ui << (LENGTH(tags) + arg->i)); view(&shifted); }
 
 // CapsLock - escape
 // ShiftMask - shift_l, shift_r
@@ -40,12 +30,12 @@ void shiftview(const Arg *arg) { Arg shifted; shifted.ui = selmon->tagset[selmon
 // Mod4Mask - super_l
 // Mod5Mask - super_r
 #define MODKEY Mod4Mask // для налаштування командної клавіші в моєму випадку це command_l
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } } // для запуску команд
 #define TAGKEYS(KEY,TAG) \
   { MODKEY,                        KEY,  view,        {.ui = 1 << TAG} }, /* перейти до вибраного тегу */ \
   { MODKEY|ShiftMask,              KEY,  tag,         {.ui = 1 << TAG} }, /* перекинути активне вікно в вибраний тег */ \
   { MODKEY|ControlMask,            KEY,  toggleview,  {.ui = 1 << TAG} }, /* обєднує вікна вибраних тегів */ \
   { MODKEY|ControlMask|ShiftMask,  KEY,  toggletag,   {.ui = 1 << TAG} }, /* відобразити активне вікно в вибраних тегах */
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } } // для запуску команд
 
 // комбінації для клавіатури
 static const Key keys[] = {
@@ -137,3 +127,7 @@ static const Button buttons[] = {
 
 // налаштування де і як буду відкриватися програми
 static const Rule rules[0] = {};
+
+// відключення dmenu
+static char dmenumon[2];
+static const char *dmenucmd[] = { NULL };
