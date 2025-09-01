@@ -1,0 +1,32 @@
+system
+  wpa
+  bash
+  startx / xorg
+  dwm
+  pipewire
+  pacmixer
+  bluetui
+  t2fanrd
+  vim
+  dunst
+  redshift
+  translate-shell
+  mechsim
+  flameshot
+
+main
+  alacritty
+  qutebrowser
+  vscode
+  zed
+  btop
+  xfe
+
+virtualbox
+obsidian
+anki
+gimp
+sigil
+epubcheck
+gimp
+darktable

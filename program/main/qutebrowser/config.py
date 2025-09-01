@@ -121,3 +121,44 @@ config.bind('sg', 'greasemonkey-reload')
 config.bind('ss', 'config-cycle statusbar.show always in-mode')
 config.bind('st', 'config-cycle tabs.show always switching')
 config.bind('vv', 'open https://translate.google.com/translate?sl=auto&tl=uk&u={url}')
+
+# cd ~/.local/share/qutebrowser/greasemonkey
+#  wget https://update.greasyfork.org/scripts/9165/Auto%20Close%20YouTube%20Ads.user.js
+#  wget https://update.greasyfork.org/scripts/436115/Return%20YouTube%20Dislike.user.js
+#  wget https://update.greasyfork.org/scripts/394512/YouTube%20ProgressBar%20Preserver.user.js
+#  wget https://gist.githubusercontent.com/vikarchukk/bc4b302100c13bf8c88f106131f2b495/raw/1077d661c26808e1aea4a8a6315aaa6a020d97cf/monocraft-font.user.js
+# shift + ;
+#  :greasemonkey-reload # in qutebrowser
+
+# всі що не юзаю компінації заглушити
+
+# qutebrowser
+# ├─ команда + число + рух
+# ├─ normal / escape
+# |  ├─ переміщення
+# |  |  ├─ по сторінці
+# │  │  │  ├─ k - верх / j - вниз / h - вліво / l - вправо
+# │  │  │  ├─ gg - скролити на початок / G - скролити на кінець
+# │  │  │  └─ L - назад по історії / H - вперед по історії
+# │  │  └─ по вкладкам
+# │  │     ├─ J - назад / K - вперед
+# │  │     ├─ o - нова / d - закрити
+# │  │     ├─ z - відкрити котрись сайт
+# │  │     ├─ v - перекласти сторінку
+# │  │     └─ u - відкрити останю закриту вкладку
+# │  ├─ + - збільшити зум / - - зменшити зум / = - класичний зум
+# │  └─ r - перезагрузити сторінку
+# ├─ follow / f - натиснути на щось
+# ├─ insert / i - написати щось
+# ├─ search / / - знайти щось
+# │  └─ n - вперед / N - назад
+# └─ command / :
+#    ├─ devtools - відкрити вікно інструментів
+#    ├─ download - зробити котрісь маніпуляції зі скачуванням
+#    ├─ yank - скопіювати url
+#    ├─ tab-only - закрити всі вкладки крім активної
+#    ├─ unbind - видалити комбінацію клавіш
+#    ├─ bind - додати комбінацію клавіш або переглянути що робить комбінація
+#    ├─ fullscreen - робить вікно на весь екран
+#    ├─ help - переглянути документацію
+#    └─ qw - вийти з vieb (або ZZ)

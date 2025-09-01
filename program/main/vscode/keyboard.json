@@ -1,0 +1,11 @@
+[
+  // ctrl + shft + P > Open Keyboard Shortcuts (JSON)
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.previousEditor"
+  }
+]
