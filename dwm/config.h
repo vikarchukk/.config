@@ -136,4 +136,4 @@ static const Button buttons[] = {
 };
 
 // налаштування де і як буду відкриватися програми
-static const Rule rules[] = {};
+static const Rule rules[0] = {};
