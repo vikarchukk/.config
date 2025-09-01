@@ -8,7 +8,12 @@ static const float mfact = 0.55; // розмір основної області
 static const int nmaster = 1; // кількість вікон в головній зоні
 static const int resizehints = 0; // підказки щодо розміру 1 включити
 static const int lockfullscreen = 1; // використовує весь екран 1 включити
-// static const int attachbelow = 1; // налаштування від пачу котрий відкриває нові вікна збоку // > wget https://dwm.suckless.org/patches/attachbelow/dwm-attachbelow-6.2.diff | пач для того щоб нові вікна відкривалися збокух > patch --merge -i dwm-attachbelow-6.2.diff
+
+
+static const int refreshrate = 120;  // refresh rate (per second) for client move/resize
+static char dmenumon[2] = "0"; // монітор для dmenu
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL }; // команда dmenu
+
 
 static const char *fonts[] = { "monocraft:size=12" }; // шрифт і розмір
 static const char *colors[][3] = {
@@ -131,4 +136,4 @@ static const Button buttons[] = {
 };
 
 // налаштування де і як буду відкриватися програми
-static const Rule rules[0] = {};
+static const Rule rules[] = {};
